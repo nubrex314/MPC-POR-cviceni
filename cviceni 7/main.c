@@ -1,9 +1,4 @@
-/*
- * cviceni-7.c
- *
- * Created: 20.03.2024 12:36:13
- * Author : msukd
- */ 
+
 
 #include <avr/io.h>
 #include <stdio.h>

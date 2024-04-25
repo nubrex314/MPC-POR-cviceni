@@ -1,9 +1,3 @@
-/*
- * cviceni_6.c
- *
- * Created: 13.03.2024 12:22:57
- * Author : skapak martin
- */ 
 
 #include <avr/io.h>
 #include <stdio.h>

@@ -1,9 +1,4 @@
-/*
- * UART.c
- *
- * Created: 28.02.2024 12:17:25
- *  Author: msukd
- */ 
+
 
 #include "UART.h"
 #include <stdio.h>
@@ -34,7 +29,7 @@ void initUART(uint16_t bautrate)
 	/*Enable receiver and transmitter */
 	UCSR0B = (1<<RXEN0)|(1<<TXEN0);
 	
-	//prerušeni recieve dat
+	//preruï¿½eni recieve dat
 	 UCSR0B |= (1 << RXCIE0);
 	
 	/* Set frame format: 8data, 2stop bit */

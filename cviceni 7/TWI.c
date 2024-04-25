@@ -1,9 +1,4 @@
-/*
- * RTC.c
- *
- * Created: 20.03.2024 12:50:56
- *  Author: msukd
- */ 
+
 
 #include <stdio.h>
 #include <avr/io.h>
@@ -124,7 +119,7 @@ void twi_data_read_ack(int enable)
 
 void twi_write(uint8_t *data, uint8_t addres, uint8_t regis,uint16_t leng) 
 {
-	// Zápis dat do I2C
+	// Zï¿½pis dat do I2C
 	uint16_t i = 0;
 	twi_start();
 	
@@ -175,7 +170,7 @@ void error(int8_t err)
 {
 	switch (err) {
 		case NO_ERROR:
-		// Žádná chyba
+		// ï¿½ï¿½dnï¿½ chyba
 		break;
 		case START_ACK_ERROR:
 		//twi_stop();
@@ -199,7 +194,7 @@ void error(int8_t err)
 		//twi_stop();
 		break;
 		default:
-		// Neznámý chybový kód
+		// Neznï¿½mï¿½ chybovï¿½ kï¿½d
 		break;
 	}
 }

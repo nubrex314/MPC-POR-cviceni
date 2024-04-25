@@ -1,9 +1,4 @@
-/*
- * timer.c
- *
- * Created: 21.02.2024 19:56:06
- *  Author: msukdo00
- */ 
+
 #include "timer.h"
 #include <stdio.h>
 #include <avr/io.h>

@@ -1,9 +1,3 @@
-/*
- * keyboard.h
- *
- * Created: 13.03.2024 12:34:29
- *  Author: msukd
- */ 
 
 
 #ifndef KEYBOARD_H_

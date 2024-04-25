@@ -1,9 +1,4 @@
-/*
- * LCD.c
- *
- * Created: 06.03.2024 12:30:45
- *  Author: msukd
- */ 
+
 
 #include <stdio.h>
 #include <avr/io.h>
@@ -19,7 +14,7 @@
 #define LCD_D6 PD6
 #define LCD_D7 PD7
 
-// Definice enum pro tlaèítka
+// Definice enum pro tlaï¿½ï¿½tka
 typedef enum {
 	SELECT,
 	LEFT,

@@ -1,9 +1,3 @@
-/*
- * RTC.h
- *
- * Created: 20.03.2024 12:51:09
- *  Author: msukd
- */ 
 
 
 #ifndef RTC_H_
@@ -13,28 +7,28 @@
 #include <avr/interrupt.h>
 
 
-#define START_ACK		 0x08 // Start byl odeslán
-#define REP_START_ACK	 0x10 // Opakovaný start byl odeslán
-#define SLA_W_ACK		 0x18 // SLA+W byl odeslán a ACK pøijat
-//#define SLA_W_NACK		 0x20 // SLA+W byl odeslán a NACK pøijat
-#define DATA_W_ACK		 0x28 // Data byte byl odeslán a ACK pøijat
-//#define DATA_W_NACK		 0x30 // Data byte byl odeslán a NACK pøijat
-#define LOST_ARB		 0x38 // Ztráta arbitráže v SLA+W nebo data byte
+#define START_ACK		 0x08 // Start byl odeslï¿½n
+#define REP_START_ACK	 0x10 // Opakovanï¿½ start byl odeslï¿½n
+#define SLA_W_ACK		 0x18 // SLA+W byl odeslï¿½n a ACK pï¿½ijat
+//#define SLA_W_NACK		 0x20 // SLA+W byl odeslï¿½n a NACK pï¿½ijat
+#define DATA_W_ACK		 0x28 // Data byte byl odeslï¿½n a ACK pï¿½ijat
+//#define DATA_W_NACK		 0x30 // Data byte byl odeslï¿½n a NACK pï¿½ijat
+#define LOST_ARB		 0x38 // Ztrï¿½ta arbitrï¿½e v SLA+W nebo data byte
 
-#define SLA_R_ACK		0x40 // SLA+R byl odeslán a ACK pøijat
-//#define SLA_R_NACK		0x48 // SLA+R byl odeslán a NACK pøijat
-#define DATA_R_ACK		0x50 // Data byte byl pøijat a ACK odeslán
-#define DATA_R_NACK		0x58 // Data byte byl pøijat a NACK odeslán
+#define SLA_R_ACK		0x40 // SLA+R byl odeslï¿½n a ACK pï¿½ijat
+//#define SLA_R_NACK		0x48 // SLA+R byl odeslï¿½n a NACK pï¿½ijat
+#define DATA_R_ACK		0x50 // Data byte byl pï¿½ijat a ACK odeslï¿½n
+#define DATA_R_NACK		0x58 // Data byte byl pï¿½ijat a NACK odeslï¿½n
 
 typedef enum {
-	NO_ERROR = 0, // Žádná chyba
-	START_ACK_ERROR=-1, // Chyba pøi odesílání startu
-	REP_START_ACK_ERROR=-2, // Chyba pøi odesílání opakovaného startu
-	SLA_W_ACK_ERROR=-3, // Chyba pøi odesílání SLA+W
-	DATA_ACK_ERROR=-4, // Chyba pøi odesílání dat a pøijetí ACK
-	LOST_ARB_ERROR=-5, // Chyba pøi ztrátì arbitráže
-	SLA_R_ACK_ERROR=-6, // Chyba pøi odesílání SLA+R a pøijetí ACK
-	DATA_READ_ACK_ERROR=-7, // Chyba pøi ètení dat a odesílání ACK
+	NO_ERROR = 0, // ï¿½ï¿½dnï¿½ chyba
+	START_ACK_ERROR=-1, // Chyba pï¿½i odesï¿½lï¿½nï¿½ startu
+	REP_START_ACK_ERROR=-2, // Chyba pï¿½i odesï¿½lï¿½nï¿½ opakovanï¿½ho startu
+	SLA_W_ACK_ERROR=-3, // Chyba pï¿½i odesï¿½lï¿½nï¿½ SLA+W
+	DATA_ACK_ERROR=-4, // Chyba pï¿½i odesï¿½lï¿½nï¿½ dat a pï¿½ijetï¿½ ACK
+	LOST_ARB_ERROR=-5, // Chyba pï¿½i ztrï¿½tï¿½ arbitrï¿½e
+	SLA_R_ACK_ERROR=-6, // Chyba pï¿½i odesï¿½lï¿½nï¿½ SLA+R a pï¿½ijetï¿½ ACK
+	DATA_READ_ACK_ERROR=-7, // Chyba pï¿½i ï¿½tenï¿½ dat a odesï¿½lï¿½nï¿½ ACK
 } I2C_ErrorCode;
 
 void initTWI(uint32_t Hz);

@@ -1,9 +1,4 @@
-/*
- * ADC.c
- *
- * Created: 03.03.2024 9:25:53
- *  Author: msukd
- */ 
+
 
 #include <stdio.h>
 #include <avr/io.h>

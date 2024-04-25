@@ -1,9 +1,4 @@
-/*
- * timer.h
- *
- * Created: 21.02.2024 19:56:34
- *  Author: msukd
- */ 
+
  /*!****************************************************************************
  * @file timer.h
  * @brief funkce zabezpečujici měreni času/spoždeni 

@@ -1,9 +1,4 @@
-/*
- * cv5.c
- *
- * Created: 06.03.2024 12:29:44
- * Author : msukd
- */ 
+
 #include <stdio.h>
 #include <avr/io.h>
 #include "ADC.h"

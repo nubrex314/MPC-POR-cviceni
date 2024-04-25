@@ -1,9 +1,3 @@
-/*
- * ADC.h
- *
- * Created: 03.03.2024 9:26:05
- *  Author: msukd
- */ 
 
 
 #ifndef ADC_H_

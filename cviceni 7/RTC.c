@@ -1,9 +1,4 @@
-/*
- * RTC.c
- *
- * Created: 23.03.2024 19:16:50
- *  Author: msukd
- */ 
+
 
 #include "RTC.h"
 

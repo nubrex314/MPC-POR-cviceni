@@ -1,9 +1,3 @@
-/*
- * LCD.h
- *
- * Created: 06.03.2024 12:30:56
- *  Author: msukd
- */ 
 
 
 #ifndef LCD_H_

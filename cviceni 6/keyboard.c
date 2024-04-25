@@ -1,9 +1,3 @@
-/*
- * keyboard.c
- *
- * Created: 13.03.2024 12:34:15
- *  Author: msukd
- */ 
 
 #include <stdio.h>
 #include <avr/io.h>
@@ -11,7 +5,7 @@
 #include "keyboard.h"
 #include "timer.h"
 
-// Definice pinù pro øádky a sloupce
+// Definice pinï¿½ pro ï¿½ï¿½dky a sloupce
 #define ROWS 4
 #define COLS 3
 
@@ -23,25 +17,25 @@ char keys[ROWS][COLS] = {
 };
 
 
-// Funkce pro inicializaci klávesnice
+// Funkce pro inicializaci klï¿½vesnice
 void initkeyboard()
 {
-	// Nastavení øádkù jako výstupy s pull-up odpory
+	// Nastavenï¿½ ï¿½ï¿½dkï¿½ jako vï¿½stupy s pull-up odpory
 	DDRD |= (1 << PORTD2) | (1 << PORTD3);
 	PORTD |= (1 << PORTD2) | (1 << PORTD3);
 
 	DDRB |= (1 << PORTB3) | (1 << PORTB4);
 	PORTB |= (1 << PORTB3) | (1 << PORTB4);
-	// Nastavení sloupcù jako vstupy s pull-up odpory
+	// Nastavenï¿½ sloupcï¿½ jako vstupy s pull-up odpory
 	DDRC &= ~((1 << PORTC0) | (1 << PORTC1) | (1 << PORTC2));
 	PORTC |= (1 << PORTC0) | (1 << PORTC1) | (1 << PORTC2);
 }
 
-// Funkce pro ètení stisknuté klávesy
+// Funkce pro ï¿½tenï¿½ stisknutï¿½ klï¿½vesy
 char keyboard_read()
  {
 	for (int row = 0; row < ROWS; row++) {
-		// Aktivace øádku
+		// Aktivace ï¿½ï¿½dku
 		if (row<2)
 		{
 			PORTD &= ~(1 << (PORTD2 + row));
@@ -50,13 +44,13 @@ char keyboard_read()
 			PORTB &= ~(1 << (PORTB3 + row-2));
 		}
 		
-		delay(1000); // Krátké zpoždìní pro stabilitu
+		delay(1000); // Krï¿½tkï¿½ zpoï¿½dï¿½nï¿½ pro stabilitu
 
 		for (int col = 0; col < COLS; col++) 
 		{
-			// Ètení sloupce
+			// ï¿½tenï¿½ sloupce
 			if (!(PINC & (1 << col))) {
-				// Klávesa stisknuta
+				// Klï¿½vesa stisknuta
 				while(!(PINC&(1<<col)))
 				{
 					delay(1000);
@@ -75,5 +69,5 @@ char keyboard_read()
 		}
 		}
 
-	return '\0'; // Žádná klávesa stisknuta
+	return '\0'; // ï¿½ï¿½dnï¿½ klï¿½vesa stisknuta
 }

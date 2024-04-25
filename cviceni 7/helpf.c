@@ -1,9 +1,4 @@
-/*
- * helpf.c
- *
- * Created: 15.03.2024 16:30:45
- *  Author: msukd
- */ 
+
 
 #include <stdio.h>
 #include <avr/io.h>
@@ -15,7 +10,7 @@
 void string_clear(char *string)
 {
 	for (int i = 0; i < 16; i++) {
-		string[i] = '\0'; // Smazání obsahu øetìzce
+		string[i] = '\0'; // Smazï¿½nï¿½ obsahu ï¿½etï¿½zce
 	}
 }
 

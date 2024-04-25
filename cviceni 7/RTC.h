@@ -1,9 +1,3 @@
-/*
- * RTC.h
- *
- * Created: 23.03.2024 19:17:02
- *  Author: msukd
- */ 
 
 
 #ifndef RTC_H_

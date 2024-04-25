@@ -1,9 +1,4 @@
-/*
- * UART.h
- *
- * Created: 28.02.2024 12:17:48
- *  Author: msukd
- */ 
+
 #pragma once
 #include <avr/interrupt.h>//preruseni
 

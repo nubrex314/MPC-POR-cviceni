@@ -1,9 +1,3 @@
-/*
- * encoder.h
- *
- * Created: 13.03.2024 12:33:59
- *  Author: msukd
- */ 
 
 
 #ifndef ENCODER_H_

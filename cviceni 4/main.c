@@ -1,9 +1,4 @@
-/*
- * blindproject.c
- *
- * Created: 27.02.2024 16:47:36
- * Author : msukd
- */ 
+
 #include <stdio.h>
 #include <avr/io.h>
 #include "UART.h"

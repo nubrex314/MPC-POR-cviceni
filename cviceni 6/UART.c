@@ -1,9 +1,3 @@
-/*
- * UART.c
- *
- * Created: 28.02.2024 12:17:25
- *  Author: msukd
- */ 
 
 #include "UART.h"
 #include <stdio.h>

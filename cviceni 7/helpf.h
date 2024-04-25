@@ -1,9 +1,3 @@
-/*
- * helpf.h
- *
- * Created: 15.03.2024 16:31:00
- *  Author: msukd
- */ 
 
 
 #ifndef HELPF_H_

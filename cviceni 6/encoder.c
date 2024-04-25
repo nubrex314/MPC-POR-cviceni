@@ -1,9 +1,3 @@
-/*
- * encoder.c
- *
- * Created: 13.03.2024 12:33:42
- *  Author: msukd
- */ 
 
 #include <stdio.h>
 #include <avr/io.h>
@@ -18,16 +12,16 @@ volatile uint8_t D2_old	 = 0;
 volatile uint8_t D3_old = 0;
 
 void init_encoder() {
-	// Nastavení pull-up rezistorù na pinech D2, D3 a B3
+	// Nastavenï¿½ pull-up rezistorï¿½ na pinech D2, D3 a B3
 	PORTD |= (1 << PORTD2) | (1 << PORTD3);
 	PORTB |= (1 << PORTB3);
-// Nastavení pinù jako vstupy
+// Nastavenï¿½ pinï¿½ jako vstupy
 	DDRD &= ~((1 << PORTD2) | (1 << PORTD3));
 	DDRB &= ~(1 << PORTB3);
 	
-	// Povolení externích pøerušení 
+	// Povolenï¿½ externï¿½ch pï¿½eruï¿½enï¿½ 
 	PCICR = (1 << PCIE0)|(1 << PCIE2);
-	// Povolení pøerušení pro konkrétní piny
+	// Povolenï¿½ pï¿½eruï¿½enï¿½ pro konkrï¿½tnï¿½ piny
 	PCMSK2 = (1 << PCINT18)|(1 << PCINT19);
 	PCMSK0 |= (1 << PCINT3);
 }
@@ -54,7 +48,7 @@ ISR(PCINT2_vect)
 	PCICR |= (1 << PCIE2); 
 }
 
-// Pøerušení pro tlaèítko
+// Pï¿½eruï¿½enï¿½ pro tlaï¿½ï¿½tko
 ISR(PCINT0_vect) {
 	buttonPressCount++;
 	//zakmity
